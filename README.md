@@ -47,8 +47,9 @@ mvn spring-boot:run
 
 ### Test
 
+* La app se puede ejecutar en el localhost en el puerto 8081
 * Se agregaron test unitario con la librería de Junit y Mockito
-* Se habilitó la interfaz de swagger
+* Se habilitó la interfaz de swagger para la documentación de los métodos mas importantes y se puede acceder a través de la siguiente url: http://localhost:8081/swagger-ui.html#/
 * En el repositorio viene incluido el archivo postman, que contiene las url de las peticiones del servicio, tanto para ambiente local, como para ambiente GCP
 
 
