@@ -8,7 +8,9 @@ git clone https://github.com/Bardo1/transTest.git
 ```
 * Este test se desarrolló con el framework Spring Boot
 
-* Se trabajó con una base de datos embebida con h2 para la persistencia de usuario como venta
+* las clases java dentro de la aplicación están con una sintaxis y formato en lenguaje en inglés para conservar el standar global. Exceptuando la descripción para javadoc, lo que está en español
+
+* Se trabajó con una base de datos embebida con h2 para la persistencia de la entidad usuario y la entidad venta
 
 * Se utiliza spring security para verificar los request y la validación de basic auth de los usuarios.
 A continuación el usuario que ya está registrado al momento de arrancar la aplicación:
