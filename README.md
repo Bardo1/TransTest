@@ -6,22 +6,17 @@
 ```
 git clone https://github.com/Bardo1/transTest.git
 ```
-
-
 * Este test se desarrolló con el framework Spring Boot
 
-Se trabajó con una base de datos embebida con h2
+* Se trabajó con una base de datos embebida con h2 para la persistencia de usuario como venta
 
-
-
-
-documentar cada clase
-
-Se utiliza spring security para verificar los basic auth desde fuera con 
+* Se utiliza spring security para verificar los request y la validación de basic auth de los usuarios.
+A continuación el usuario que ya está registrado al momento de arrancar la aplicación:
+```
 usuario:12345678
 password:12345678
-
-Se encriptan las contraseñas con ...bcrypt.BCryptPasswordEncoder
+```
+* A nivel de seguridad se encriptan las contraseñas con la funcion bcrypt que nos proporciona Spring Security, lo que nos permite crear un hash de la contraseña y poder almacenarla en la base de dato de una forma un poco mas segura.
 
 
 
@@ -30,13 +25,13 @@ S e utilizó JSP
 Para la mensajeria de publicación a la Cola MQ, Se utilizó 
 
 ejecutar un servidor de RabbitMQ de facil acceso a través de una image docker generado con un docker-compose.yml
-
+```
 rabbitmq:
   image: rabbitmq:management
   ports:
     - "5672:5672"
     - "15672:15672"
-
+```
 Ejecutar el archivo de arranque
 ```
 docker-compose up
