@@ -45,7 +45,7 @@ rabbitmq:
     - "15672:15672"
 ```
 Se debe ejecutar el archivo de arranque para levantar el servicio. Para esto, es necesario posicionarse en la linea de comando a nivel del archivo y correr el siguiente comando.
-(Solo basta con ejecutar esto para que esté arriba)
+(Solo basta con ejecutar esto para que esté arriba, además de tener instalado docker previamente)
 ```
 docker-compose up
 ```
