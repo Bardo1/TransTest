@@ -1,7 +1,7 @@
 # TransBank Test 
 
 
-1. El primer paso es la clonación del repositorio publico del proyecto en github:
+* El primer paso es la clonación del repositorio publico del proyecto en github:
 ```
 git clone https://github.com/Bardo1/transTest.git
 ```
@@ -10,6 +10,8 @@ git clone https://github.com/Bardo1/transTest.git
 * las clases java dentro de la aplicación están con una sintaxis y formato en lenguaje inglés para conservar el standar global. Exceptuando la descripción de las clases para javadoc, lo que está en español
 
 * Se trabajó con una base de datos embebida con h2 para la persistencia de la entidad usuario y la entidad venta
+
+### Login, validación de usuario y seguridad
 
 * Se utiliza spring security para verificar los request y la validación de basic auth de los usuarios.
 A continuación el usuario que ya está registrado al momento de arrancar la aplicación:
