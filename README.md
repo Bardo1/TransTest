@@ -46,7 +46,6 @@ docker-compose up
 Limpiar e instalar dependencias de Spring
 ```
 mvn clean install
-
 ```
 Ejecutar el componente de Spring
 ```
@@ -68,5 +67,7 @@ http://localhost:8081/swagger-ui.html#/
 
 
 Eso.
+
 Saludos y Gracias.
 
+Atento a cualquier feedback de mejoramiento.
