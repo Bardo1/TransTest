@@ -23,6 +23,10 @@ password:12345678
 ```
 http://localhost:8081/login
 ```
+* Una vez dentro y como forma de comprobar la seguridad es ejecutando el despliegue de las ventas ya almacenadas. Con el siguiente comando a tráves del navegador
+```
+http://localhost:8081/v1/listSale
+```
 * A nivel de seguridad se encriptan las contraseñas con la funcion bcrypt que nos proporciona Spring Security, lo que nos permite crear un hash de la contraseña y poder almacenarla en la base de dato de una forma un poco mas segura.
 
 * Para las vistas del login se utilizó un proyecto estándar encontrado con Java Server Pages, por la facilidad de implementación (Podia hacerlo con otras tecnologias mas complejas con Angular)
