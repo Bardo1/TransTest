@@ -64,6 +64,8 @@ mvn clean test
 http://localhost:8081/swagger-ui.html#/
 ```
 * En el repositorio viene incluido el archivo postman, que contiene las url de las peticiones del servicio, en ambiente localhost.
+Además añadir, que estas peticiones, tanto verbos http GET, como POST, vienen ya con las credenciales de basi auth, lo que permite realizar las llamadas
+a los endpoint definidos sin problemas.
 
 
 Eso.
