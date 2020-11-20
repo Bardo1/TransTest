@@ -25,6 +25,8 @@ http://localhost:8081/login
 
 * Para las vistas del login se utilizó un proyecto estandar encontrado con Java Server Pages, por la facilidad de implementación (Podia hacerlo con otras tecnologias mas complejas con Angular)
 
+### Cola y publicación
+
 * Para la mensajeria de publicación a la Cola MQ, se utilizó RabbitMQ, lo que me permitió generar una cola estandar de facil acceso que se define dentro de la clases "WebApplication". Además tambien se implementó un receptor, a la escucha de la cola, que permite imprimir en la sección de logs el resultado del mensaje decodificado en base64.
 
 ejecutar un servidor de RabbitMQ de facil acceso a través de una imagen docker generado con un docker-compose.yml
@@ -52,18 +54,14 @@ mvn spring-boot:run
 ### Test
 
 * La app se puede ejecutar en el localhost en el puerto 8081
-* Se agregaron test unitario con la librería de Junit y Mockito
+* Se agregaron test unitario con la librería de Junit y Mockito. Se pueden probar de forma independiente con el comando:
+```
+mvn clean test
+```
 * Se habilitó la interfaz de swagger para la documentación de los métodos mas importantes y se puede acceder a través de la siguiente url: http://localhost:8081/swagger-ui.html#/
 * En el repositorio viene incluido el archivo postman, que contiene las url de las peticiones del servicio, tanto para ambiente local, como para ambiente GCP
 
 
-### Se utilizaron servicios de GCP como:
-
-- Pub/Sub (Se generó el tópico indicado a través de la plataforma, el canal de conexión y envió a través de Spring)
-Nota: Saqué el canal de suscripción del componente de spring, ya que no me lo pidieron, aunque igual dejé el canal de suscripción activado en la plataforma.
-
-- IAM, para las cuentas de servicio, y roles de asignación de perfil.
-
-
+Eso.
 Saludos y Gracias.
 
