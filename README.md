@@ -5,7 +5,7 @@
 ```
 git clone https://github.com/Bardo1/transTest.git
 ```
-* Este test se desarrolló con el framework Spring Boot
+* Este componente se desarrolló con el framework Spring Boot en ámbito principal 
 
 * las clases java dentro de la aplicación están con una sintaxis y formato en lenguaje inglés para conservar el estándar global. Exceptuando la descripción de las clases para javadoc, lo que está en español
 
