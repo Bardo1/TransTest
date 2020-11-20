@@ -17,11 +17,15 @@ A continuación el usuario que ya está registrado al momento de arrancar la apl
 usuario:12345678
 password:12345678
 ```
+* Se puede acceder al interfaz de login al colocar el siguiente endpoint en el navegador:
+```
+http://localhost:8081/login
+```
 * A nivel de seguridad se encriptan las contraseñas con la funcion bcrypt que nos proporciona Spring Security, lo que nos permite crear un hash de la contraseña y poder almacenarla en la base de dato de una forma un poco mas segura.
 
-* Login, Se utilizó JSP
+* Para las vistas del login se utilizó un proyecto estandar encontrado con Java Server Pages, por la facilidad de implementación (Podia hacerlo con otras tecnologias mas complejas con Angular)
 
-* Para la mensajeria de publicación a la Cola MQ, Se utilizó....Listener
+* Para la mensajeria de publicación a la Cola MQ, se utilizó RabbitMQ, lo que me permitió generar una cola estandar de facil acceso que se define dentro de la clases "WebApplication". Además tambien se implementó un receptor, a la escucha de la cola, que permite imprimir en la sección de logs el resultado del mensaje decodificado en base64.
 
 ejecutar un servidor de RabbitMQ de facil acceso a través de una imagen docker generado con un docker-compose.yml
 ```
