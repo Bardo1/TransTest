@@ -29,7 +29,7 @@ http://localhost:8081/login
 
 ### Cola y publicación (Es necesario tener este servicio arriba antes del ejecutar el componente de Spring)
 
-* Para la mensajeria de publicación a la Cola MQ, se utilizó RabbitMQ, lo que me permitió generar una cola estándar de fácil acceso que se define dentro de la clase "WebApplication". Además también se implementó un receptor, a la escucha de la cola, que permite imprimir en la sección de logs el resultado del mensaje decodificado en base64.
+* Para la mensajeria de publicación a la cola MQ, se utilizó RabbitMQ, lo que me permitió generar una cola estándar de fácil acceso que se define dentro de la clase "WebApplication". Además también se implementó un receptor, a la escucha de la cola, que permite imprimir en la sección de logs el resultado del mensaje decodificado en base64.
 
 * Se implementó un servidor de RabbitMQ de fácil acceso a través de una imagen docker, generado con un docker-compose.yml.
 Este es el detalle del archivo:
