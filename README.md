@@ -1,7 +1,7 @@
 # TransBank Test 
 
 
-* El primer paso es la clonación del repositorio publico del proyecto en github:
+* El primer paso es la clonación del repositorio público del proyecto en github:
 ```
 git clone https://github.com/Bardo1/transTest.git
 ```
