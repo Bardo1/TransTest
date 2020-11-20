@@ -25,7 +25,7 @@ http://localhost:8081/login
 
 * Para las vistas del login se utilizó un proyecto estandar encontrado con Java Server Pages, por la facilidad de implementación (Podia hacerlo con otras tecnologias mas complejas con Angular)
 
-### Cola y publicación
+### Cola y publicación (Es necesario tener este servicio arriba antes del ejecutar el componente de Spring)
 
 * Para la mensajeria de publicación a la Cola MQ, se utilizó RabbitMQ, lo que me permitió generar una cola estandar de facil acceso que se define dentro de la clases "WebApplication". Además tambien se implementó un receptor, a la escucha de la cola, que permite imprimir en la sección de logs el resultado del mensaje decodificado en base64.
 
@@ -58,8 +58,11 @@ mvn spring-boot:run
 ```
 mvn clean test
 ```
-* Se habilitó la interfaz de swagger para la documentación de los métodos mas importantes y se puede acceder a través de la siguiente url: http://localhost:8081/swagger-ui.html#/
-* En el repositorio viene incluido el archivo postman, que contiene las url de las peticiones del servicio, tanto para ambiente local, como para ambiente GCP
+* Se habilitó la interfaz de swagger para la documentación de los métodos mas importantes y se puede acceder a través de la siguiente url: 
+```
+http://localhost:8081/swagger-ui.html#/
+```
+* En el repositorio viene incluido el archivo postman, que contiene las url de las peticiones del servicio, en ambiente localhost.
 
 
 Eso.
