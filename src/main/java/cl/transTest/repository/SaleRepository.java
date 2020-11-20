@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import cl.transTest.domain.Sale;
 
 /**
- * SaleRepository - Clase conexion con persistencia de ventas
+ * SaleRepository - Clase conexión con la gestiones de persistencia de ventas
  *
  * @author Walter Munoz
  * @since 1.0

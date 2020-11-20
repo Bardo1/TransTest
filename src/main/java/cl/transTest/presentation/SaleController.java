@@ -37,13 +37,13 @@ public class SaleController {
     
 	@Autowired
 	private SaleService saleService;
-
-	private CountDownLatch latch = new CountDownLatch(1);
-
-	private final RabbitTemplate rabbitTemplate;
-
-	public SaleController(RabbitTemplate rabbitTemplate) {
-		this.rabbitTemplate = rabbitTemplate;
+	
+	@Autowired
+	private RabbitTemplate rabbitTemplate;
+    // para dar tiempo a la respuesta
+	private final CountDownLatch latch = new CountDownLatch(1);
+	
+	public SaleController() {
 	}
 
     /**
@@ -99,8 +99,13 @@ public class SaleController {
 		List<Sale> listSale=null;
 		
 		try {
+			// Buscamos todos los registros según la fecha del dia
 			listSale = saleService.findAllByDate(new SimpleDateFormat("yyyy-MM-dd").parse(dtf.format(now)));
-		  	// Envia la solicitud de articulo a al cola de mensajes
+			// Si no hay registros nos lanza la excepcion
+		  	if (listSale.isEmpty()) {
+				throw new ServiceException(String.valueOf(HttpStatus.BAD_REQUEST.value()),"No se han ingresado ventas en el dia de hoy");			
+			}	
+		  	// Envia la solicitud de ventas a al cola de mensajes
 			this.enviar(listSale);
 		} catch (ParseException e) {
 			e.printStackTrace();
@@ -109,10 +114,10 @@ public class SaleController {
     }
 	
 	public void enviar(List<Sale> listSale) throws Exception{
-			System.out.println("Sending message...");
+			//Codificamos la lista de ventas del dia en base64 para enviar un string a la cola
 			String encodedMessage = Base64.getEncoder().encodeToString(listSale.toString().getBytes());
 			rabbitTemplate.convertAndSend("spring-boot-exchange", "foo.bar.baz", encodedMessage);
-			this.getLatch().await(10000, TimeUnit.MILLISECONDS);
+			this.getLatch().await(1000, TimeUnit.MILLISECONDS);
 	}
 	
 	public CountDownLatch getLatch() {

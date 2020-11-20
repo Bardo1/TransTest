@@ -6,7 +6,7 @@ import java.util.Optional;
 
 import cl.transTest.domain.Sale;
 /**
- * User - Clase objeto de Usuario
+ * SaleService - Clase capa de interfaz para las gestiones de servicio de ventas
  *
  * @author Walter Munoz
  * @since 1.0

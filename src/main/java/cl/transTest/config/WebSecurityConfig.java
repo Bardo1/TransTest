@@ -32,6 +32,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
               // -- swagger ui
               "/v2/api-docs",
               "/swagger-resources",
+              "/login",
               "/swagger-resources/**",
               "/configuration/ui",
               "/configuration/security",
@@ -39,10 +40,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
               "/webjars/**"
       };
     
-
-	@Autowired
-	private MyBasicAuthenticationEntryPoint authenticationEntryPoint;
-
     @Bean
     public BCryptPasswordEncoder bCryptPasswordEncoder() {
         return new BCryptPasswordEncoder();
@@ -50,8 +47,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-    	
-    	
+    	 
 	    	http.sessionManagement()
 	 	    .sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
 	        .cors().and()
@@ -68,8 +64,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             .logout()
                 .permitAll()
                 .and()
-                .httpBasic()
-                .authenticationEntryPoint(authenticationEntryPoint);
+                .httpBasic();
 
     }
 

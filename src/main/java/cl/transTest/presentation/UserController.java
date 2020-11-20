@@ -23,6 +23,7 @@ import cl.transTest.utils.UserValidator;
  * @since 1.0
  * @version 1.0 version inicial
  */
+
 @Controller
 public class UserController {
 	
@@ -71,7 +72,7 @@ public class UserController {
     }
     
     @GetMapping("/v1/listUser")
-	public ResponseEntity<List<User>> listSale() throws ServiceException{
+	public ResponseEntity<List<User>> listUser() throws ServiceException{
 	  	List<User> listSale= userService.findAll();
 		return new ResponseEntity<>(listSale, HttpStatus.OK);
 	}

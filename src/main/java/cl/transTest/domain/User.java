@@ -1,7 +1,6 @@
 package cl.transTest.domain;
 
 import javax.persistence.*;
-import java.util.Set;
 
 /**
  * User - Clase objeto de Usuario
@@ -24,10 +23,18 @@ public class User {
     @Transient
     private String passwordConfirm;
 
-    @ManyToMany
-    private Set<Role> roles;
+    public User() {
+	}
+    
+    public User(Long id, String username, String password, String passwordConfirm) {
+		super();
+		this.id = id;
+		this.username = username;
+		this.password = password;
+		this.passwordConfirm = passwordConfirm;
+	}
 
-    public Long getId() {
+	public Long getId() {
         return id;
     }
 
@@ -59,11 +66,6 @@ public class User {
         this.passwordConfirm = passwordConfirm;
     }
 
-    public Set<Role> getRoles() {
-        return roles;
-    }
-
-    public void setRoles(Set<Role> roles) {
-        this.roles = roles;
-    }
+  
 }
+

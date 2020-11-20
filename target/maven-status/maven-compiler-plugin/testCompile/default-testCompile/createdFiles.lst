@@ -1,2 +1,4 @@
-cl\transTest\WebApplicationTest.class
+cl\transTest\MessagingRabbitmqTest.class
 cl\transTest\controller\SaleControllerTestIT.class
+cl\transTest\WebApplicationTest.class
+cl\transTest\controller\SaleControllerTest.class

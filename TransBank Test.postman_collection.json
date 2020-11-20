@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "e23660d4-3694-4cc4-8bb0-b02a0becfd13",
+		"name": "TransBank Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Insertar una venta",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "12345678",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"number\": 800,\r\n        \"description\": \"venta de cocina\",\r\n        \"quantity\": 1,\r\n        \"value\": 222,\r\n        \"date\": \"2020-11-23\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/v1/insertSale",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"insertSale"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar ventas",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "12345678",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/v1/listSale",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"listSale"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Usuarios",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "12345678",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/v1/listUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"listUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Enviar a Cola, por el dia de hoy",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "12345678",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/v1/sendQueueByDayDate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"sendQueueByDayDate"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
