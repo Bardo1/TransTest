@@ -27,13 +27,13 @@ http://localhost:8081/login
 ```
 http://localhost:8081/v1/listSale
 ```
-* A nivel de seguridad se encriptan las contraseñas con la funcion bcrypt que nos proporciona Spring Security, lo que nos permite crear un hash de la contraseña y poder almacenarla en la base de dato de una forma un poco mas segura.
+* A nivel de seguridad se encriptan las contraseñas con la función bcrypt que nos proporciona Spring Security, lo que nos permite crear un hash de la contraseña y poder almacenarla en la base de dato de una forma un poco más segura.
 
-* Para las vistas del login se utilizó un proyecto estándar encontrado con Java Server Pages, por la facilidad de implementación (Podia hacerlo con otras tecnologias mas complejas con Angular)
+* Para las vistas del login se utilizó un proyecto estándar encontrado con Java Server Pages, por la facilidad de implementación (Podía hacerlo con otras tecnologias más complejas con Angular)
 
 ### Cola y publicación (Es necesario tener este servicio arriba antes del ejecutar el componente de Spring)
 
-* Para la mensajeria de publicación a la cola MQ, se utilizó RabbitMQ, lo que me permitió generar una cola estándar de fácil acceso que se define dentro de la clase "WebApplication". Además también se implementó un receptor, a la escucha de la cola, que permite imprimir en la sección de logs el resultado del mensaje decodificado en base64.
+* Para la mensajería de publicación a la cola MQ, se utilizó RabbitMQ, lo que me permitió generar una cola estándar de fácil acceso que se define dentro de la clase "WebApplication". Además también se implementó un receptor, a la escucha de la cola, que permite imprimir en la sección de logs el resultado del mensaje decodificado en base64.
 
 * Se implementó un servidor de RabbitMQ de fácil acceso a través de una imagen docker, generado con un docker-compose.yml.
 Este es el detalle del archivo:
@@ -65,7 +65,7 @@ mvn spring-boot:run
 ```
 mvn clean test
 ```
-* Se habilitó la interfaz de swagger para la documentación de los métodos mas importantes y se puede acceder a través de la siguiente url: 
+* Se habilitó la interfaz de swagger para la documentación de los métodos más importantes y se puede acceder a través de la siguiente url: 
 ```
 http://localhost:8081/swagger-ui.html#/
 ```
