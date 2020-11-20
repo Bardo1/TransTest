@@ -1,4 +1,3 @@
-cl\transTest\repository\RoleRepository.class
 cl\transTest\service\Impl\SecurityServiceImpl.class
 cl\transTest\service\UserService.class
 cl\transTest\repository\SaleRepository.class
@@ -14,7 +13,6 @@ cl\transTest\domain\Sale.class
 cl\transTest\service\SaleService.class
 cl\transTest\WebApplication.class
 cl\transTest\repository\UserRepository.class
-cl\transTest\domain\Role.class
 cl\transTest\presentation\UserController.class
 cl\transTest\utils\UserValidator.class
 cl\transTest\service\Impl\UserServiceImpl.class
