@@ -29,9 +29,10 @@ http://localhost:8081/login
 
 ### Cola y publicación (Es necesario tener este servicio arriba antes del ejecutar el componente de Spring)
 
-* Para la mensajeria de publicación a la Cola MQ, se utilizó RabbitMQ, lo que me permitió generar una cola estandar de facil acceso que se define dentro de la clases "WebApplication". Además tambien se implementó un receptor, a la escucha de la cola, que permite imprimir en la sección de logs el resultado del mensaje decodificado en base64.
+* Para la mensajeria de publicación a la Cola MQ, se utilizó RabbitMQ, lo que me permitió generar una cola estandar de facil acceso que se define dentro de la clase "WebApplication". Además también se implementó un receptor, a la escucha de la cola, que permite imprimir en la sección de logs el resultado del mensaje decodificado en base64.
 
-ejecutar un servidor de RabbitMQ de facil acceso a través de una imagen docker generado con un docker-compose.yml
+* Se implementó un servidor de RabbitMQ de facil acceso a través de una imagen docker, generado con un docker-compose.yml.
+Este es el detalle del archivo:
 ```
 rabbitmq:
   image: rabbitmq:management
@@ -39,7 +40,8 @@ rabbitmq:
     - "5672:5672"
     - "15672:15672"
 ```
-Ejecutar el archivo de arranque, para levantar el servicio. (Solo basta con ejecutar este comando)
+Se debe ejecutar el archivo de arranque para levantar el servicio. Para esto, es necesario posicionarse en la linea de comando a nivel del archivo y correr el siguiente comando.
+(Solo basta con ejecutar esto para que esté arriba)
 ```
 docker-compose up
 ```
