@@ -27,7 +27,7 @@ public class SwaggerConfig {
 	public Docket apiUsers() {
 		return new Docket(DocumentationType.SWAGGER_2)
 		.select()
-		.apis(RequestHandlerSelectors.basePackage(cl.transTest.WebApplication.class.getPackageName()))
+		.apis(RequestHandlerSelectors.basePackage("cl.transTest"))
 		.paths(PathSelectors.any())
 		.build()
 		.apiInfo(apiInfo());
